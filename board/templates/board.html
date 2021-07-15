@@ -23,58 +23,48 @@
             </ul>
         </nav>
         <div class="boards-container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-12">
-                    <div class="row card-row">
-                        <div class="card board-card" style="width: 18rem;">
-                            <div class="card-body board-card-body">
-                                <h5 class="card-title">To Do</h5> 
-                                <div class="box"> 
-                                    <button type="button" class="addcard">&#43; Add a card</button>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card board-card" style="width: 18rem;">
-                            <div class="card-body board-card-body">
-                                <h5 class="card-title">In Progress</h5>
-                                <div class="box"> 
-                                    <button type="button" class="addcard">&#43; Add a card</button>
-                                    <div class="pencil-icon">&#128393;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card board-card" style="width: 18rem;">
-                            <div class="card-body board-card-body">
-                                <h5 class="card-title">Code review</h5>
-                                <div class="box"> 
-                                    <button type="button" class="addcard">&#43; Add a card</button>
-                                    <div class="pencil-icon">&#128393;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card board-card" style="width: 18rem;">
-                            <div class="card-body board-card-body">
-                                <h5 class="card-title">Testing</h5>
-                                <div class="box"> 
-                                    <button type="button" class="addcard">&#43; Add a card</button>
-                                    <div class="pencil-icon">&#128393;</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card board-card" style="width: 18rem;">
-                            <div class="card-body board-card-body">
-                                <h5 class="card-title">Done</h5>
-                                <div class="box"> 
-                                    <button type="button" class="addcard">&#43; Add a card</button>
-                                    <div class="pencil-icon">&#128393;</div>
-                                </div>
-                            </div>
+            <div class="row card-row">
+                <div class="card board-card" style="width: 18rem;">
+                    <div class="card-body board-card-body" id="toDo">
+                        <h5 class="card-title">To Do</h5> 
+                        <div class="box"> 
+                            <button type="button" class="addcard">&#43; Add a card</button>    
                         </div>
                     </div>
                 </div>
-                <div class="col"></div>
-            </div>
+                <div class="card board-card" style="width: 18rem;">
+                    <div class="card-body board-card-body" id="inProgress">
+                        <h5 class="card-title">In Progress</h5>
+                        <div class="box"> 
+                            <button type="button" class="addcard">&#43; Add a card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card board-card" style="width: 18rem;">
+                    <div class="card-body board-card-body" id="codeReview">
+                        <h5 class="card-title">Code review</h5>
+                        <div class="box"> 
+                            <button type="button" class="addcard">&#43; Add a card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card board-card" style="width: 18rem;">
+                    <div class="card-body board-card-body" id="testing">
+                        <h5 class="card-title">Testing</h5>
+                        <div class="box"> 
+                            <button type="button" class="addcard">&#43; Add a card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card board-card" style="width: 18rem;">
+                    <div class="card-body board-card-body" id="done">
+                        <h5 class="card-title">Done</h5>
+                        <div class="box"> 
+                            <button type="button" class="addcard">&#43; Add a card</button>
+                        </div>
+                    </div>
+                </div>
+            <div>
         </div>
 
 
@@ -98,7 +88,7 @@
 
         
         
-        <script src="{% static 'https://code.jquery.com/jquery-3.2.1.min.js' %}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'static_jquery/js/jquery.min.js' %}"></script>
         <script src="{% static 'bootstrap-5.0.1-dist/js/bootstrap.min.jsN' %}" ></script>
         
         <script>
@@ -107,14 +97,31 @@
                 var card = $(".board-card-body");
                 var add_card_button = $(".addcard");
 
+
                 var x = 0;
                 $(add_card_button).click(function(e) {
                     e.preventDefault();
+
                     if(x <= max_cards) {
-                        $(card).append('<div class="box card-box"><form><div class="pencil-icon">&#128393;</div><div class="form-group"><label for="card-bofy"></label><textarea class="form-control" rows="3" placeholder="Enter card info"></textarea></div><br><button type="button" class="btn crd-btn">Add</button></form></div>')
+                        $(this).parent().hide();
+                        $(this).parent().parent().append('<div class="box card-box"><form><div class="pencil-icon">&#128393;</div><div class="form-group"><label for="card-bofy"></label><textarea class="form-control" rows="3" placeholder="Enter card info"></textarea></div><br><button type="button" class="btn crd-btn">Add</button></form></div>');
                         x++;
                     }
+
+                    var card_btn = $(".card-btn");
+
+                    $(card_btn).click(function(e) {
+                        e.preventDefault();
+
+                        
+                    });
+
+
+
                 });
+
+               
+
             });
         </script>
 
