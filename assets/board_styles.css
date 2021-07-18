@@ -49,6 +49,7 @@ ul.topnav li a:hover {
     padding-bottom: 8.8px;
 }
 
+
 /* Boards Container */
 .boards-container {
     margin-top: 65px;
@@ -108,6 +109,23 @@ button.addcard:hover {
     cursor: pointer;
     border-bottom: solid #009688 1px;
 }
+
+.remove_field {
+    margin: 7px;
+    padding-right: 5px;
+    border-bottom: solid #2d333b 1px;
+    color: #cdd9ef;
+    text-decoration: none;
+}
+.remove_field:hover {
+    color: #cdd9ef;
+    background-color: #1c212888;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: solid #009688 1px;
+}
+
 button.crd-btn {
     background-color:#1c2128;
     color:#cdd9ef;
@@ -117,4 +135,19 @@ button.crd-btn {
 button.crd-btn:hover {
     background-color:#1c2128bd;
     color: #cdd9ef;
+}
+
+.card-content {
+    color: #1c2128;
+    background-color: #eee;
+    padding: 6px;
+    border: solid #1c2128 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
