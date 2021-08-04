@@ -13,9 +13,18 @@
         <title>My Board</title>
     </head>
     <body>
+
         <nav>
             <ul class="topnav" id="dropdownclick">
-                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li class="topnav-brand">
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'homepage' %}">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
+                    </a>
+                </li>
+                <li><a href="{% url 'board:dashboard' %}">Dashboard</a></li>
                 <li><a href="#boards">Boards</a></li>
                 <li class="topnav-right"><a href="#profile">Profile</a></li>
                 <li class="topnav-right"><a href="#signup">Sign Up</a></li>
@@ -29,7 +38,7 @@
                         <h5 class="card-title">To Do</h5>
                         {% for x in ThisBoard %}
 
-                            {% if x.board_id == 1 %}
+                            {% if x.title_id == 1 %}
 
                                 <div class="card-content">
                                     <div class="pencil-icon">&#128393;</div>
@@ -51,7 +60,7 @@
                         <h5 class="card-title">In Progress</h5>
                         {% for x in ThisBoard %}
 
-                            {% if x.board_id == 2 %}
+                            {% if x.title_id == 2 %}
 
                                 <div class="card-content">
                                     <div class="pencil-icon">&#128393;</div>
@@ -71,7 +80,7 @@
                         <h5 class="card-title">Code review</h5>
                         {% for x in ThisBoard %}
 
-                            {% if x.board_id == 3 %}
+                            {% if x.title_id == 3 %}
 
                                 <div class="card-content">
                                     <div class="pencil-icon">&#128393;</div>
@@ -91,7 +100,7 @@
                         <h5 class="card-title">Testing</h5>
                         {% for x in ThisBoard %}
 
-                            {% if x.board_id == 4 %}
+                            {% if x.title_id == 4 %}
 
                                 <div class="card-content">
                                     <div class="pencil-icon">&#128393;</div>
@@ -111,7 +120,7 @@
                         <h5 class="card-title">Done</h5>
                         {% for x in ThisBoard %}
 
-                            {% if x.board_id == 5 %}
+                            {% if x.title_id == 5 %}
 
                                 <div class="card-content">
                                     <div class="pencil-icon">&#128393;</div>

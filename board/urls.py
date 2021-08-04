@@ -1,4 +1,4 @@
-from projectmanagement.views import add_card
+
 from django.contrib import admin
 from django.urls import path
 from .import views
@@ -6,5 +6,7 @@ from .import views
 app_name = 'board'
 
 urlpatterns = [
-    path('', views.board, name="myboard")
+    path('', views.dashboard, name="dashboard"),
+    path('project/', views.project, name="thisproject")
+
 ]

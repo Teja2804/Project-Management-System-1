@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    background-color: #1c2128;
+    background-color: #cdd9ef85 ;
     margin: 0;
 }
 
@@ -19,7 +19,7 @@ nav {
     font-size: 18px;
 }
 nav ul {
-    background-color: #2d333b;
+    background-color: #4e73df;
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -39,12 +39,18 @@ ul.topnav li a {
     text-align: center;
     padding: 10px;
     text-transform: uppercase;
-    color: #cdd9ef;
+    color: #fff;
 }
 ul.topnav li a:hover {
-    background-color: #1c2128;
+    background-color: #fff;
     color: #5d6873;
-    border-bottom: solid #009688 1.2px;
+    border-bottom: solid #4e73df 1.2px;
+    border-radius: 10px;
+    padding-bottom: 8.8px;
+}
+ul.topnav li.topnav-brand a:hover {
+    background-color: #4e73df;
+    color: #fff;
     border-radius: 10px;
     padding-bottom: 8.8px;
 }
@@ -65,8 +71,8 @@ ul.topnav li a:hover {
 .board-card {
     margin: 7px;
     margin-top: 7px;
-    background-color: #2d333b;
-    color: #cdd9ef;
+    background-color: #4e73df;
+    color: #fff;
 }
 .box {
     padding: 7px;

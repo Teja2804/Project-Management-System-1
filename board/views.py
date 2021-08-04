@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import *
 from .forms import *
 
-def board(request):
+def project(request):
 
     ThisBoard = InsideBoard.objects.all()
 
@@ -14,4 +14,5 @@ def board(request):
     return render(request, 'board.html',context)
 
 
- 
+def dashboard(request):
+    return render(request, 'dashboard.html')
