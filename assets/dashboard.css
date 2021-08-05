@@ -10987,3 +10987,6 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.mr-2 a:hover {
+  text-decoration: none;
+}

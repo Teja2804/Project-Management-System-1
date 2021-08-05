@@ -6,7 +6,7 @@ from .import views
 app_name = 'board'
 
 urlpatterns = [
-    path('', views.dashboard, name="dashboard"),
+    path('', views.board_dashboard, name="dashboard"),
     path('project/', views.project, name="thisproject")
 
 ]
