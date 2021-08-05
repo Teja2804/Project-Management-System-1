@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block content %}
+		{% if title %}
+			<title>{{ title }}</title>
+		{% else %}
+			<title>Meet up</title>
+		{% endif %}
+		<!-- Load static -->
+		{% load static %}
+	
+	
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+	
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+
+	<style>
+		
+            
+*{
+	font-family: 'poppins', sans-serif;
+	padding: 0px;
+		margin:0px;
+		box-sizing: border-box;
+}		
+section{
+	position:relative;
+    width:	100%;
+	height: 100vh;
+	display: flex;
+} 	
+div.site-branding{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+div.logo{
+	display: inline;
+	vertical-align: middle;
+}
+div.imgit{
+	display: inline;
+	vertical-align: middle;
+	margin-top:45px;
+	margin-left:50px;
+	margin-right: 30px;
+	width:40%;
+	height:80%;
+	position: absolute;
+	object-fit: cover;
+}
+ section .imgit:before{
+	content: '';
+	position: absolute;
+	top:75px;
+	left:40px;
+	bottom:100px;
+	width: 40%;
+	height: 80%;
+	background: linear-gradient(225deg,#fff);
+	z-index:1;
+	mix-blend-mode: screen;
+} 
+ section .imgit img{
+	top:75px;
+	left:0px;
+	bottom:100px;
+	width:100%;
+	height:80%;
+	position: absolute;
+	object-fit: cover;
+}
+div.contentbox{
+	display: flex;
+	 width: 50%;
+	height: 100%;
+	margin-left:600px;
+	justify-content:center;
+	align-items: center;
+	
+}
+.contentbox .formbox{
+	width: 40%;
+}
+.contentbox .formbox .user_inputbox{
+	 margin-bottom: 20px;
+}
+.contentbox .formbox .user_inputbox span{
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: inline-block;
+	color: #607d8b;
+	font-weight: 300;
+	letter-spacing: 1px;
+	
+}
+.contentbox .formbox .user_inputbox input{
+	width: 150%;
+	padding: 10px 20px;
+	outline: none;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border: 1px solid black;
+	border-radius: 3px;
+	color: #607d8b;
+	
+}
+.remember{
+	margin-bottom: 10px;
+	color: #607d8b;
+}
+.contentbox .formbox .user_inputbox input[type="submit"]{
+	background-color: blue;
+	outline: none;
+	border: none;
+	width: 50%;
+	font-weight: 500;
+	color: #fff;
+}
+.contentbox .formbox .user_inputbox input[type="submit"]:hover{
+	background-color:  #f53677;
+}
+.contentbox .formbox .user_inputbox p{
+	color: #607d8b;
+}
+.contentbox .formbox .user_inputbox p a{
+color: #607d8b;
+}
+.contentbox .formbox .user_inputbox p a:hover{
+color : #f53677;
+}
+.line{
+	background-color:black;
+	height:1px;
+	width: 100px;
+	margin-top:10px;
+}
+.or {
+    width: 30px;
+	margin:-19px auto 50px;
+}
+ .contentbox .formbox h6{
+	color: black;
+	font-size:20px;
+	margin: 10px 0px 10px;
+	font-weight: 300;
+}
+.socmedia{
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content:center;
+} 
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 40px;
+	margin: 10px;
+    cursor: pointer;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 40px;
+	margin: 10px;
+    cursor: pointer;
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 40px;
+	margin: 10px;
+    cursor: pointer;
+} 
+/*.contentbox .formbox .login{
+	font-size: 20px;
+	margin-bottom: 10px;
+	display: inline-block;
+	color:black;
+	font-weight: bold;
+	letter-spacing: 1px;
+}*/
+ .contentbox .formbox .socmedia li{
+	 list-style: none;
+	 width: 35px;
+	 height: 35px;
+	 display: flex;
+	 justify-content:center;
+	 align-items:center;
+	  background:#fff;
+	 border-radius: 50%;
+	 margin: 0px 10px;
+	 cursor: pointer;
+ }
+ .sidebar-brand-text{
+	 margin-left: 30px;
+	 padding: 5px;
+	 margin-right: 50px;
+	 margin-top: 10px;
+	font-size: 200%;
+	text-decoration: none;
+	cursor: pointer;
+	
+ }
+ /* if , we have transparent logos, then logos can be hovered by changing src in jpg,png in html*/
+  /* .contentbox .formbox .socmedia li:hover{
+	 background : #f53677;
+ }
+ .contentbox .formbox .socmedia li img{
+	 transform: scale(1.25);
+   border-radius: 50%;
+   margin: 0px 25px ;
+	 width: 35px;
+	 height:35px;
+	cursor: pointer;
+}
+@media screen and (max-width :992px){
+	section.imgit{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+	} */
+	section.contentbox{
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	section.formbox{
+		width: 100%;
+		padding: 40px;
+		background:#fff;
+		margin: 50px;
+	}
+}
+
+	</style>
+
+</head>
+<body>
+
+	<section>
+		<div class="site-branding">
+			<div class="logo">
+				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
+					<div class="sidebar-brand-icon rotate-n-15">
+					  <i class="fas fa-address-card"></i>
+					</div>
+					<div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
+				  </a>
+			<!-- <img src="logo.png" alt="MEET UP" width="100px" height="100px" />     -->
+			</div>
+			<div class="imgit">
+			<!-- <img src="" alt="image" ></div> -->
+			<img src="https://i.imgur.com/uNGdWHi.png" alt="image" width="600px" height="500px"></div> 
+			</div>
+		</div>
+		<div class="contentbox">
+		  <div class="formbox">
+		<!-- sign in with facebook, twitter column-->
+		<h6>Sign in with</h6>
+		<ul class="socmedia">
+				   <li><div class="facebook text-center mr-3">
+								<div class="fa fa-facebook"><a href="#"></a></div>
+							</div></li>
+							<li><div class="twitter text-center mr-3">
+								<div class="fa fa-twitter"><a href="#"></a></div>
+							</div></li>
+					 <li><div class="linkedin text-center mr-3">
+								<div class="fa fa-linkedin"><a href="#"></a></div>
+							</div></li>  <!--<img src="Linkedln1.jpg"/> -->
+				</ul>
+			<div class="row px-3 mb-4">
+							<div class="line"></div> <br/><small class="or text-center">Or</small>
+						</div>	
+	<br/>					
+		   <form method="POST" action="">
+			{% csrf_token %}
+		  <!-- <div class="login">
+				<span>LOGIN</span>
+				 </div>		 -->
+			<div class="user_inputbox">
+				<span>username : </span><input type="text" name="username">
+				<br/><br/>
+				 <span>Password :</span><input type="password" name="password"/><br/>
+				</div>
+				<br/>
+				<div class="remember">
+				<label><input type="checkbox" name="remember">Remember me</label>
+				</div>
+				<br/>
+				<div class="user_inputbox">
+				<p><a href="{% url 'password_reset' %}">Forgot Password?</a></p> </div>
+				<br/>
+			 <div class="user_inputbox">
+				<input type="submit" value="Login" name="login">
+				</div>
+			<div class="user_inputbox">
+				<p>Don't have an account?<a href="{% url 'signup' %}"> Register</a></p></div>
+		</form>
+	   </div>
+	  </div>
+		</section>
+			
+</body>
+</html>
+{% endblock %}

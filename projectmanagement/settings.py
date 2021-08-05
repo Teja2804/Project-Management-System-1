@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_static_jquery',
+    #'django_static_jquery',
     'board'
 ]
 
@@ -83,7 +84,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'Root@12345',
+        'PASSWORD': 'Tejasree@28',
     }
 }
 
@@ -129,6 +130,24 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
+
+# LOGIN_REDIRECT_URL = '/'
+ 
+#SMTP configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'Test123@gmail.com'
+EMAIL_HOST_PASSWORD = 'trelloit'
+
+
+# REST_FRAMEWORK = {
+  #  'DEFAULT_PERMISSION_CLASSES': [
+   #     'rest_framework.permissions.AllowAny',
+    #],
+   # 'PAGE_SIZE': 10  }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
