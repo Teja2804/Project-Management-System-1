@@ -11,7 +11,6 @@ app_name = 'accounts'
 # We are adding a URL called /home
 urlpatterns = [
     path('', views.home, name='home'),
-    path('dashboard/',views.dashboardView , name='dashboard'),
     path('login/', views.loginpage,name='login'),
    
     #path('password_reset_done/', views.password_reset_done, name='password_reset_done'),
