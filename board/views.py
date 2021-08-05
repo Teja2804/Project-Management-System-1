@@ -5,14 +5,26 @@ from .forms import *
 
 def project(request):
 
+    Title = Board.objects.all()
+
     ThisBoard = InsideBoard.objects.all()
 
     form = CardForm()
 
-    context = {'ThisBoard':ThisBoard, 'form':form}
+    context = {'ThisBoard':ThisBoard, 'form':form, 'title':Title}
 
     return render(request, 'board.html',context)
 
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+
+    Title = Board.objects.all()
+
+    ThisBoard = InsideBoard.objects.all()
+
+    form = CardForm()
+
+    context = {'ThisBoard':ThisBoard, 'form':form, 'title':Title}
+
+    return render(request, 'dashboard.html',context)
+

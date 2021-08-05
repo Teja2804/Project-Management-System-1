@@ -7,13 +7,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+         <!-- Custom fonts for this template-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link href="{% static 'dashboard.css' %}" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'bootstrap-5.0.1-dist/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'board_styles.css' %}">
 
         <title>My Board</title>
     </head>
     <body>
-
         <nav>
             <ul class="topnav" id="dropdownclick">
                 <li class="topnav-brand">
@@ -31,112 +37,120 @@
                 <li class="topnav-right"><a href="#signin">Sign In</a></li>
             </ul>
         </nav>
-        <div class="boards-container">
-            <div class="row card-row">
-                <div class="card board-card" style="width: 18rem;">
-                    <div class="card-body board-card-body" id="ToDo">
-                        <h5 class="card-title">To Do</h5>
-                        {% for x in ThisBoard %}
-
-                            {% if x.title_id == 1 %}
-
-                                <div class="card-content">
-                                    <div class="pencil-icon">&#128393;</div>
-                                    <p>{{x.CardBody}}</p>
-                                </div>
-
-                            {% endif %}
-
-                        {% endfor %} 
-                        <div class="box"> 
-                            <button type="button" class="addcard">&#43; Add a card</button>    
+        <div class="projecttitle">
+            {% for y in title %}
+                <h3>{{y.Title}}</h3>
+            {% endfor %}
+        </div>
+        <div>
+            <div class="boards-container">
+                <div class="row card-row">
+                    <div class="card board-card" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="ToDo">
+                            <h5 class="card-title">To Do</h5>
+                            {% for x in ThisBoard %}
+    
+                                {% if x.title_id == 1 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %} 
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>    
+                            </div>
+                            
                         </div>
                         
                     </div>
-                    
-                </div>
-                <div class="card board-card" style="width: 18rem;">
-                    <div class="card-body board-card-body" id="InProgress">
-                        <h5 class="card-title">In Progress</h5>
-                        {% for x in ThisBoard %}
-
-                            {% if x.title_id == 2 %}
-
-                                <div class="card-content">
-                                    <div class="pencil-icon">&#128393;</div>
-                                    <p>{{x.CardBody}}</p>
-                                </div>
-
-                            {% endif %}
-
-                        {% endfor %}
-                        <div class="box"> 
-                            <button type="button" class="addcard">&#43; Add a card</button>
+                    <div class="card board-card" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="InProgress">
+                            <h5 class="card-title">In Progress</h5>
+                            {% for x in ThisBoard %}
+    
+                                {% if x.title_id == 2 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card board-card" style="width: 18rem;">
-                    <div class="card-body board-card-body" id="CodeReview">
-                        <h5 class="card-title">Code review</h5>
-                        {% for x in ThisBoard %}
-
-                            {% if x.title_id == 3 %}
-
-                                <div class="card-content">
-                                    <div class="pencil-icon">&#128393;</div>
-                                    <p>{{x.CardBody}}</p>
-                                </div>
-
-                            {% endif %}
-
-                        {% endfor %}
-                        <div class="box"> 
-                            <button type="button" class="addcard">&#43; Add a card</button>
+                    <div class="card board-card" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="CodeReview">
+                            <h5 class="card-title">Code review</h5>
+                            {% for x in ThisBoard %}
+    
+                                {% if x.title_id == 3 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card board-card" style="width: 18rem;">
-                    <div class="card-body board-card-body" id="Testing">
-                        <h5 class="card-title">Testing</h5>
-                        {% for x in ThisBoard %}
-
-                            {% if x.title_id == 4 %}
-
-                                <div class="card-content">
-                                    <div class="pencil-icon">&#128393;</div>
-                                    <p>{{x.CardBody}}</p>
-                                </div>
-
-                            {% endif %}
-
-                        {% endfor %}
-                        <div class="box"> 
-                            <button type="button" class="addcard">&#43; Add a card</button>
+                    <div class="card board-card" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="Testing">
+                            <h5 class="card-title">Testing</h5>
+                            {% for x in ThisBoard %}
+    
+                                {% if x.title_id == 4 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card board-card" style="width: 18rem;">
-                    <div class="card-body board-card-body" id="Done">
-                        <h5 class="card-title">Done</h5>
-                        {% for x in ThisBoard %}
-
-                            {% if x.title_id == 5 %}
-
-                                <div class="card-content">
-                                    <div class="pencil-icon">&#128393;</div>
-                                    <p>{{x.CardBody}}</p>
-                                </div>
-
-                            {% endif %}
-
-                        {% endfor %}
-                        <div class="box"> 
-                            <button type="button" class="addcard">&#43; Add a card</button>
+                    <div class="card board-card" style="width: 18rem;">
+                        <div class="card-body board-card-body" id="Done">
+                            <h5 class="card-title">Done</h5>
+                            {% for x in ThisBoard %}
+    
+                                {% if x.title_id == 5 %}
+    
+                                    <div class="card-content">
+                                        <div class="pencil-icon">&#128393;</div>
+                                        <p>{{x.CardBody}}</p>
+                                    </div>
+    
+                                {% endif %}
+    
+                            {% endfor %}
+                            <div class="box"> 
+                                <button type="button" class="addcard">&#43; Add a card</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <div>
+                <div>
+            </div>
         </div>
+        
 
 
 
