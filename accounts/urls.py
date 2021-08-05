@@ -6,6 +6,8 @@ from django.contrib.auth import views as auth_views
 
 from . import views
 
+app_name = 'accounts'
+
 # We are adding a URL called /home
 urlpatterns = [
     path('', views.home, name='home'),
