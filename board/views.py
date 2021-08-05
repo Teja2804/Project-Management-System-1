@@ -16,15 +16,13 @@ def project(request):
     return render(request, 'board.html',context)
 
 
-def dashboard(request):
+def board_dashboard(request):
 
     Title = Board.objects.all()
 
     ThisBoard = InsideBoard.objects.all()
 
-    form = CardForm()
+    context = {'ThisBoard':ThisBoard, 'title':Title}
 
-    context = {'ThisBoard':ThisBoard, 'form':form, 'title':Title}
-
-    return render(request, 'dashboard.html',context)
+    return render(request, 'board_dashboard.html',context)
 
