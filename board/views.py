@@ -26,3 +26,5 @@ def board_dashboard(request):
 
     return render(request, 'board_dashboard.html',context)
 
+def calendar(request):
+    return render(request, 'calendar.html')
