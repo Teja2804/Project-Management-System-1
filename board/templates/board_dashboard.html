@@ -149,7 +149,7 @@
                   <div class="card-body">
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
-                        <a href="#">
+                        <a href="{% url 'board:detail' slug=y.slug %}">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project {{y.board_id}}</div>
                           <div class="h5 mb-0 font-weight text-gray-800">{{y.Title}}</div>
                         </a>

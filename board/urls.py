@@ -7,7 +7,6 @@ app_name = 'board'
 
 urlpatterns = [
     path('', views.board_dashboard, name="dashboard"),
-    path('project/', views.project, name="thisproject"),
-    path('calendar/', views.calendar, name="calendar")
-
+    path('calendar/', views.calendar, name="calendar"),
+    path('<slug:slug>/', views.project_detail ,name="detail")
 ]
