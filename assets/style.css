@@ -452,34 +452,19 @@ p {
   .about-area {
     padding-top: 30px;
     padding-bottom: 80px; } }
-
+.about-area .row{
+  margin-left: -145px;
+}
 .about-image {
   position: relative; }
-  .about-image::before {
-    position: absolute;
-    content: '';
-    background-image: url(../images/about/dots.jpg);
-    background-position: center center;
-    background-size: 100%;
-    width: 375px;
-    height: 350px;
-    left: 50%;
-    top: 50%;
-    z-index: -1; }
-    @media (max-width: 767px) {
-      .about-image::before {
-        display: none; } }
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .about-image::before {
-        display: block; } }
   .about-image .single-image {
     width: 360px; }
     @media only screen and (min-width: 992px) and (max-width: 1200px) {
       .about-image .single-image {
-        width: 280px; } }
+        width: 480px; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .about-image .single-image {
-        width: 400px; } }
+        width: 600px; } }
     @media (max-width: 767px) {
       .about-image .single-image {
         width: 100%; } }
@@ -501,23 +486,7 @@ p {
       @media only screen and (min-width: 576px) and (max-width: 767px) {
         .about-image .single-image.image-tow {
           margin-top: -200px; } }
-  .about-image .about-btn {
-    position: relative;
-    margin-left: 80px;
-    margin-top: -40px;
-    display: inline-block;
-    z-index: 9; }
-    @media (max-width: 767px) {
-      .about-image .about-btn {
-        margin: 0 auto;
-        display: block;
-        text-align: center; } }
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .about-image .about-btn {
-        margin-left: 80px;
-        display: inline-block;
-        text-align: left;
-        margin-top: -50px; } }
+ 
    
 
 .about-content .about-welcome {

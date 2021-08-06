@@ -32,7 +32,7 @@ def signupview(request):
                 user=form.cleaned_data.get('username')
                 email=form.cleaned_data.get('email')
                 messages.success(request, 'Account created successfully')
-                return redirect('home')
+                return redirect('accounts:home')
                 #return HttpResponse("User created successfully")
         else:
             form = CreateUserForm()
@@ -57,7 +57,7 @@ def loginpage(request):
             if user is not None:
                 login(request,user)
                 messages.success(request, f' welcome {username} !!')
-                return redirect('dashboard')
+                return redirect("{% url('board:dashboard') %}")
             else:
                 messages.info(request,'Username or Password is incorrect')  
         else:
