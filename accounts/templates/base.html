@@ -36,8 +36,7 @@
     <link rel="stylesheet" href="{% static 'slick.css' %}">
 
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="{% static 'default.css' %}" type="text/css">
-
+    <link rel="stylesheet" href="{% static 'default.css' %}" type="text/css">  
 
     <!--====== Style css ======-->
    <link rel="stylesheet" href="{% static 'style.css' %}">    
@@ -112,7 +111,7 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
-            <div class="banner-image bg_cover" style="background-image: {% static ('images/banner/firstimage.jpg')" width= "50px" height="60px" ></div>
+            <div class="banner-image bg_cover" style="background-image: ('assets/images/banner/firstimage.jpg')" width= "50px" height="60px" ></div>
         </div> <!-- header banner -->
 
     </header>
@@ -127,7 +126,7 @@
                 <div class="col-lg-6">
                     <div class="about-image mt-50 clearfix">
                         <div class="single-image float-left">
-                            <img src="assets/images/about/about.png" alt="About" width='200px' height='200px'>
+                            <img src="{% static 'images/about/about.png' %}" alt="About" width='200px' height='200px'>
                         </div> <!-- single image -->
                     </div> <!-- about image -->
                 </div>
@@ -221,7 +220,7 @@
                             <h4 class="services-title">Hospitality Design</h4>
                             <p class="mt-20">enter para</p>
                         </div>
-                    </div> <!-- single services 
+                    </div>  single services 
                 </div> -->
             </div> <!-- row -->
         </div> <!-- container -->
@@ -250,7 +249,7 @@
                 <div class="col-lg-4">
                     <div class="single-project">
                         <div class="project-image">
-                            <img src="assets/images/project/board2.png" alt="Project" width='200px' height='200px'>
+                            <img src="{% static 'images/project/board2.png' %}" alt="Project" width='200px' height='200px'>
                         </div>
                         <div class="project-content">
                             <a class="project-title" href="#">Home Interior Design</a>
@@ -262,7 +261,7 @@
                 <div class="col-lg-4">
                     <div class="single-project">
                         <div class="project-image">
-                            <img src="assets/images/project/p-2.jpg" alt="Project">
+                            <img src="{% static 'images/project/p-2.jpg' %}" alt="Project">
                         </div>
                         <div class="project-content">
                             <a class="project-title" href="#">Home Interior Design</a>
@@ -503,28 +502,28 @@
 
 
     <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
 
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <!--====== WOW js ======-->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
 
     <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
 
     <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/scrolling-nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
 
     <!--====== Aos js ======-->
-    <script src="assets/js/aos.js"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
 
 
     <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 
