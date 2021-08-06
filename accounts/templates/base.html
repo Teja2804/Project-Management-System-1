@@ -76,17 +76,14 @@
                                         <a class="page-scroll" href="#Why_MEET_UP">Why MEET UP?</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#How_it_works">How it works</a>
+                                        <a class="page-scroll" href="#about">about</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#service">Services</a>
                                     </li>
-                                 <!--   <li class="nav-item">
+                                     <li class="nav-item">
                                         <a class="page-scroll" href="#project">Projects</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#team">Team</a>
-                                    </li> -->
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact">Contact</a>
                                     </li>
@@ -130,13 +127,7 @@
                 <div class="col-lg-6">
                     <div class="about-image mt-50 clearfix">
                         <div class="single-image float-left">
-                            <img src="assets/images/about/about-1.png" alt="About">
-                        </div> <!-- single image -->
-                        <div data-aos="fade-right" class="about-btn">
-                            <a class="main-btn" href="#"><span>27</span> Years Experience</a>
-                        </div>
-                        <div class="single-image image-tow float-right">
-                            <img src="assets/images/about/about-2.png" alt="About">
+                            <img src="{% static 'assets/images/about/about.png' %}" alt="About" width='200px' height='200px'>
                         </div> <!-- single image -->
                     </div> <!-- about image -->
                 </div>
@@ -145,8 +136,7 @@
                         <h4 class="about-welcome">About Us </h4>
                         <h3 class="about-title mt-10">Reasons to choose</h3>
                         <p class="mt-25">matter about the project
-                            <br> <br>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a class="main-btn mt-25" href="#">learn more</a>
+                            <br> <br>It was popularised in the 1960s with </p>
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
@@ -256,6 +246,12 @@
 
         <div class="container-fluid">
             <div class="row project-active">
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="single-services text-center mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+                        <div class="services-icon"><img src="{% static 'images//kanban boards.jpg' %}" alt="logo" width="80px" height="40px"/></div>
+                    </div> <!-- single services -->
+                </div>
 
                 <div class="col-lg-4">
                     <div class="single-project">

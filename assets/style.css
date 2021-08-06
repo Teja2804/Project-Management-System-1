@@ -645,7 +645,9 @@ p {
       position: absolute;
       right: 70px;
       top: 0; } }
-
+.sidebar-brand{
+  margin-left:-46px;
+}
 
 
      
