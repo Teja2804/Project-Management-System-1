@@ -87,6 +87,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'Root@12345',
     }
+   
 }
 
 
@@ -136,12 +137,12 @@ STATICFILES_DIRS = (
  
 #SMTP configuration
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ee190002023@iiti.ac.in'
-EMAIL_HOST_PASSWORD = 'userlogin'
+EMAIL_HOST_PASSWORD = 'gtnnytiwtaddjwfu'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # REST_FRAMEWORK = {
