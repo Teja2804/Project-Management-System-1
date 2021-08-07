@@ -74,9 +74,6 @@ def loginpage(request):
 
 
 #@login_required(login_url="login/")
-def dashboardView(request):
-    return HttpResponse("This is dashboard")
-
 
 def logoutView(request):
     logout(request)

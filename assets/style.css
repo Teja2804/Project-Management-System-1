@@ -123,15 +123,7 @@ p {
   cursor: pointer;
   border-radius: 30px ;
    z-index: 5;
-  /*-webkit-transition: all 0.4s ease-out 0s;
-  -moz-transition: all 0.4s ease-out 0s;
-  -ms-transition: all 0.4s ease-out 0s;
-  -o-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s;*/
   background-color: blue;
-  /*-webkit-box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65);
-  -moz-box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65);
-  box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65); */
   font-family: 'Barlow', sans-serif;
   }
   .main-btn i {
@@ -192,7 +184,7 @@ p {
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-/ }
+ 
 
 /*===========================
     2.HEADER css 
@@ -578,9 +570,9 @@ p {
       width: 100%;
       height: 100%;
       background: white;
-      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
-      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
-      background: linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
+      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%);
+      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%);
+      background: linear-gradient(rgba(255, 255, 255, 0) 50%);
       opacity: 0;
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
@@ -640,7 +632,6 @@ p {
       height: 15px;
       border-radius: 50px;
       border: 0;
-      background-color: rgba(235, 54, 86, 0.7);
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
       -ms-transition: all 0.4s ease-out 0s;
@@ -650,7 +641,7 @@ p {
       cursor: pointer; }
     .project-active .slick-dots li.slick-active button {
       width: 35px;
-      background-color: #EB3656; }
+    }
 
 /*===========================
   
@@ -788,48 +779,7 @@ p.form-message.error {
     .footer-link ul li a:hover {
       color: #EB3656; }
 
-.footer-newsleter p {
-  line-height: 26px;
-  font-size: 16px; }
 
-.footer-newsleter .newsleter {
-  position: relative; }
-  .footer-newsleter .newsleter input {
-    width: 100%;
-    height: 50px;
-    padding: 0 20px;
-    border: 1px solid #EB3656;
-    background-color: #ffeae1; }
-  .footer-newsleter .newsleter button {
-    border: 0;
-    width: 66px;
-    text-align: center;
-    padding: 0;
-    height: 50px;
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #EB3656;
-    font-size: 20px;
-    line-height: 57px;
-    cursor: pointer; }
-    @media only screen and (min-width: 992px) and (max-width: 1200px) {
-      .footer-newsleter .newsleter button {
-        width: 45px; } }
-    .footer-newsleter .newsleter button::before {
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 0;
-      width: 1px;
-      height: 36px;
-      background-color: #EB3656;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%); }
 
 .copyright-area {
   border-top: 1px solid #eceff8;
@@ -854,8 +804,8 @@ p.form-message.error {
   -ms-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  color: #fff;
-  background-color: #EB3656; }
+  color:blue;
+  background-color: blue; }
   .back-to-top:hover {
     color: #EB3656;
     background-color: #fff; }
