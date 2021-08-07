@@ -29,7 +29,7 @@ def home(request):
 
 def signupview(request):
     #if request.user.is_authenticated:
-     #   return redirect('dashboard')
+     #   return redirect('board:dashboard')
     #else:
         #form=CreateUserForm()
         if request.method == 'POST':
@@ -44,7 +44,7 @@ def signupview(request):
         else:
             form = CreateUserForm()
         return render(request,'register/signup.html',{'form':form , 'title':'register here'})
-        #return redirect('home')
+        
 
 
 def loginpage(request):
