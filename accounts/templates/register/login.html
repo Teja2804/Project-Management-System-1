@@ -9,7 +9,7 @@
 		{% if title %}
 			<title>{{ title }}</title>
 		{% else %}
-			<title>Meet up</title>
+			<title>Meet up-login</title>
 		{% endif %}
 		<!-- Load static -->
 		{% load static %}
@@ -190,7 +190,7 @@ color : #f53677;
 	 padding: 5px;
 	 margin-right: 50px;
 	 margin-top: 10px;
-	font-size: 200%;
+	font-size: 150%;
 	text-decoration: none;
 	cursor: pointer;
 	
@@ -221,7 +221,7 @@ color : #f53677;
 			<div class="logo">
 				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'accounts:home' %}">
 					<div class="sidebar-brand-icon rotate-n-15">
-					  <i class="fas fa-address-card"></i>
+					  <i class="fa fa-address-card"></i>
 					</div>
 					<div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
 				  </a>

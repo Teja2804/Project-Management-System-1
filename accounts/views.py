@@ -64,14 +64,14 @@ def loginpage(request):
             if user is not None:
                 login(request,user)
                 messages.success(request, f' welcome {username} !!')
-                return redirect("{% url('board:dashboard') %}")
+               
             else:
                 messages.info(request,'Username or Password is incorrect')  
         else:
             messages.info(request,'Username or Password is incorrect')
     form = LoginForm()
     return render(request,'register/login.html',context={"login_form":form})
-
+ 
 
 #@login_required(login_url="login/")
 
