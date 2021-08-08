@@ -30,11 +30,18 @@
                         <div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
                     </a>
                 </li>
-                <li><a href="{% url 'board:dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'board:dashboard' %}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a></li>
                 <li><a href="#boards">Boards</a></li>
-                <li class="topnav-right"><a href="#profile">Profile</a></li>
-                <li class="topnav-right"><a href="#signup">Sign Up</a></li>
-                <li class="topnav-right"><a href="#signin">Sign In</a></li>
+                <li class="topnav-right"><a href="#logout">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                </a></li>
+                <li class="topnav-right"><a href="#profile">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
             </ul>
         </nav>
         <div class="projecttitle">
