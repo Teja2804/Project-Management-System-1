@@ -10,3 +10,4 @@ class CardForm(forms.ModelForm):
     class Meta:
         model = InsideBoard
         fields = '__all__'
+        cardbody = forms.CharField(label="cardbody", widget=forms.Textarea(attrs={'class': 'form-control', 'name': 'cardbody'}))

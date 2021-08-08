@@ -186,7 +186,7 @@
                     e.preventDefault();
 
                     if(x <= max_cards) {
-                        $(this).parent().parent().append('<div class="box card-box"><form method="POST" action="/"><div class="pencil-icon">&#128393;</div><div class="form-group"><label for="card-bofy"></label><textarea class="form-control" rows="3" placeholder="Enter card info"></textarea></div><br><button type="submit" class="btn crd-btn">Add</button><a href="#" class="remove_field"> &#10761; </a></form></div>');
+                        $(this).parent().parent().append('<div class="box card-box"><form method="POST" action="/"><div class="pencil-icon">&#128393;</div><div class="form-group"><label for="cardbody"></label><textarea class="form-control" rows="3" placeholder="Enter card info" name="cardbody"></textarea></div><br><button type="submit" class="btn crd-btn">Add</button><a href="#" class="remove_field"> &#10761; </a></form></div>');
                         x++;
                     }
 
