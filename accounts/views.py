@@ -56,7 +56,7 @@ def loginpage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("{% url('board:dashboard') %}")
+            return redirect('board:dashboard')
         else:
             form = LoginForm(request.POST)
             return render(request,'register/login.html',context={"login_form":form})
