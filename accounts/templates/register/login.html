@@ -9,7 +9,7 @@
 		{% if title %}
 			<title>{{ title }}</title>
 		{% else %}
-			<title>Meet up</title>
+			<title>Meet up-login</title>
 		{% endif %}
 		<!-- Load static -->
 		{% load static %}
@@ -164,41 +164,7 @@ color : #f53677;
 	align-items: center;
 	justify-content:center;
 } 
-.facebook {
-    background-color: #3b5998;
-    color: #fff;
-    font-size: 18px;
-    padding-top: 5px;
-    border-radius: 50%;
-    width: 80px;
-    height: 40px;
-	margin: 10px;
-    cursor: pointer;
-}
 
-.twitter {
-    background-color: #1DA1F2;
-    color: #fff;
-    font-size: 18px;
-    padding-top: 5px;
-    border-radius: 50%;
-    width: 80px;
-    height: 40px;
-	margin: 10px;
-    cursor: pointer;
-}
-
-.linkedin {
-    background-color: #2867B2;
-    color: #fff;
-    font-size: 18px;
-    padding-top: 5px;
-    border-radius: 50%;
-    width: 80px;
-    height: 40px;
-	margin: 10px;
-    cursor: pointer;
-} 
 /*.contentbox .formbox .login{
 	font-size: 20px;
 	margin-bottom: 10px;
@@ -224,31 +190,11 @@ color : #f53677;
 	 padding: 5px;
 	 margin-right: 50px;
 	 margin-top: 10px;
-	font-size: 200%;
+	font-size: 150%;
 	text-decoration: none;
 	cursor: pointer;
 	
  }
- /* if , we have transparent logos, then logos can be hovered by changing src in jpg,png in html*/
-  /* .contentbox .formbox .socmedia li:hover{
-	 background : #f53677;
- }
- .contentbox .formbox .socmedia li img{
-	 transform: scale(1.25);
-   border-radius: 50%;
-   margin: 0px 25px ;
-	 width: 35px;
-	 height:35px;
-	cursor: pointer;
-}
-@media screen and (max-width :992px){
-	section.imgit{
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-	} */
 	section.contentbox{
 		display: flex;
 		justify-content:center;
@@ -275,11 +221,10 @@ color : #f53677;
 			<div class="logo">
 				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'accounts:home' %}">
 					<div class="sidebar-brand-icon rotate-n-15">
-					  <i class="fas fa-address-card"></i>
+					  <i class="fa fa-address-card"></i>
 					</div>
 					<div class="sidebar-brand-text mx-3">Meet<sup>Up</sup></div>
 				  </a>
-			<!-- <img src="logo.png" alt="MEET UP" width="100px" height="100px" />     -->
 			</div>
 			<div class="imgit">
 			<!-- <img src="" alt="image" ></div> -->
@@ -289,22 +234,8 @@ color : #f53677;
 		<div class="contentbox">
 		  <div class="formbox">
 		<!-- sign in with facebook, twitter column-->
-		<h6>Sign in with</h6>
-		<ul class="socmedia">
-				   <li><div class="facebook text-center mr-3">
-								<div class="fa fa-facebook"><a href="#"></a></div>
-							</div></li>
-							<li><div class="twitter text-center mr-3">
-								<div class="fa fa-twitter"><a href="#"></a></div>
-							</div></li>
-					 <li><div class="linkedin text-center mr-3">
-								<div class="fa fa-linkedin"><a href="#"></a></div>
-							</div></li>  <!--<img src="Linkedln1.jpg"/> -->
-				</ul>
-			<div class="row px-3 mb-4">
-							<div class="line"></div> <br/><small class="or text-center">Or</small>
-						</div>	
-	<br/>					
+		<h3>SIGN IN WITH</h3>	
+		<br/>	
 		   <form method="POST" action="">
 			{% csrf_token %}
 		  <!-- <div class="login">
