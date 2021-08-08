@@ -48,29 +48,22 @@ def signupview(request):
 
 
 def loginpage(request):
-   # form=LoginForm()
+    #if request.user.is_authenticated:
+     #   return render(request, 'base.html')
     if request.method == 'POST':
-        form=LoginForm(request, data=request.POST)
-        #username=request.POST('username')
-        #password=request.POST('password')
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password1')
-            #user = authenticate(username=username, password=raw_password)
-            #login(request, user)
-            #return redirect('home')
-            #return HttpResponse("User incorrect") 
-            user=authenticate(request,username=username, password=password)
-            if user is not None:
-                login(request,user)
-                messages.success(request, f' welcome {username} !!')
-               
-            else:
-                messages.info(request,'Username or Password is incorrect')  
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("{% url('board:dashboard') %}")
         else:
-            messages.info(request,'Username or Password is incorrect')
-    form = LoginForm()
-    return render(request,'register/login.html',context={"login_form":form})
+            form = LoginForm(request.POST)
+            return render(request,'register/login.html',context={"login_form":form})
+    else:
+        form = LoginForm()
+        return render(request,'register/login.html',context={"login_form":form})
+   # return render(request,'register/login.html',context={"login_form":form})
  
 
 #@login_required(login_url="login/")
@@ -78,6 +71,6 @@ def loginpage(request):
 def logoutView(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
-    return redirect('home')
+    return redirect('account:home')
 # when entered to admin shows messages, 
 # unable to redirect to dashboard
