@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Board(models.Model):
     Title = models.CharField(max_length=35)
-    board_id = models.AutoField(primary_key = True, auto_created=True)
+    board_id = models.AutoField(primary_key = True)
     slug = models.SlugField()
 
     def __str__(self) :
